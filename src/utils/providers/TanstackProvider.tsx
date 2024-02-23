@@ -11,6 +11,7 @@ const TanstackProvider = ({ children }: TanstackProviderProps) => {
     defaultOptions: {
       queries: {
         refetchOnWindowFocus: false,
+        staleTime: 5 * 60 * 1000,
       },
     },
   });
