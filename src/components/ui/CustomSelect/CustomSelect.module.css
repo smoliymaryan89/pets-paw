@@ -1,0 +1,59 @@
+.custom-select__control {
+  @apply !border-[2px] !h-[40px] !border-transparent !shadow-none !bg-dark-white !rounded-10 py-[8px] px-[10px]  hover:!border-light-pink;
+}
+
+.custom-select__control--menu-is-open {
+  @apply !border-light-pink;
+}
+
+.custom-select__value-container {
+  @apply !p-0;
+}
+
+.custom-select__single-value {
+  @apply !m-0 !text-grey !leading-normal;
+}
+
+.custom-select__input-container {
+  @apply !p-0 !m-0;
+}
+
+.custom-select__indicator-separator {
+  @apply !hidden;
+}
+
+.custom-select__indicator {
+  @apply !p-0 transform transition-all duration-350;
+}
+
+.custom-select__indicator svg {
+  @apply !h-[12px] !w-[12px] !fill-grey transform transition-all duration-350;
+}
+
+.custom-select__control--menu-is-open .custom-select__indicator svg {
+  @apply transform rotate-180 transition-all duration-350;
+}
+
+.custom-select__menu {
+  @apply !mb-0 !shadow-none !rounded-20 !bg-white;
+}
+
+.custom-select__menu-list {
+  @apply !pt-[20px] !pb-[18px] !px-[20px];
+}
+
+.custom-select__option {
+  @apply !p-0 !mb-[10px] !text-grey !leading-normal last:!mb-0;
+}
+
+.custom-select__option--is-focused {
+  @apply !bg-transparent;
+}
+
+.custom-select__option:active {
+  @apply !bg-transparent;
+}
+
+.custom-select__option--is-selected {
+  @apply !bg-transparent;
+}
