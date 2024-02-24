@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+@import url("./components/ui/CustomSelect/CustomSelect.module.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-grey bg-dark-white font-jost;
+  }
+}
+
+@layer components {
+  .section {
+    @apply rounded-20 h-full bg-white px-[20px] pt-[20px] pb-[23px] md:pb-[20px] lg:pb-[24px] lg:w-[680px];
+  }
+
+  .cats-list {
+    @apply grid grid-cols-1 auto-rows-[210px] justify-center gap-x-0 gap-y-[10px] mx-auto max-w-[640px] md:grid-cols-3 md:gap-[20px] md:auto-rows-[140px];
+  }
+
+  .cats-item:nth-child(10n + 1),
+  .cats-item:nth-child(10n + 8) {
+    @apply row-span-1 md:row-span-2;
+  }
+
+  .cats-item:nth-child(10n + 4),
+  .cats-item:nth-child(10n + 9) {
+    @apply row-span-1 col-span-1 md:row-span-2 md:col-span-2;
+  }
+}
+
+@layer utilities {
+  .gallery-modal-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .gallery-modal-scroll::-webkit-scrollbar-track {
+    background: #fbe0dc;
+    border-radius: 20px;
+  }
+
+  .gallery-modal-scroll::-webkit-scrollbar-thumb {
+    background: #ff868e;
+    border-radius: 20px;
+  }
+}
+
+.swiper-pagination {
+  @apply !p-0 !px-[10px] !py-[10px] !rounded-20 !w-[95px] bg-white !left-1/2 !-bottom-[22px] !-translate-x-1/2 !overflow-visible !z-40;
+}
+
+.swiper-pagination-bullet {
+  @apply !m-0 !mr-[5px] last:mr-0 !w-[10px] !h-[10px] !bg-pink-60;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-pink;
+}
