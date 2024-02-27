@@ -34,7 +34,7 @@ const NavLink = ({
             "py-[10px] rounded-10 text-12 font-medium leading-[1.3] tracking-[2px]",
             pathname === path
               ? "text-white bg-pink"
-              : "text-pink bg-white group-hover:bg-light-pink transition-colors duration-350"
+              : "text-pink bg-white dark:bg-grey-10 group-hover:bg-light-pink transition-colors duration-350"
           )}
         >
           {label}

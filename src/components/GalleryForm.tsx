@@ -34,7 +34,7 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-[10px] mb-[10px] rounded-20 bg-dark-white md:flex md:flex-wrap md:gap-y-[10px] md:gap-x-[20px] md:mb-[20px] lg:gap-0 lg:px-[20px] lg:pb-[20px] lg:gap-y-[10px]"
+      className="p-[10px] mb-[10px] rounded-20 bg-dark-white dark:bg-grey-0.05 md:flex md:flex-wrap md:gap-y-[10px] md:gap-x-[20px] md:mb-[20px] lg:gap-0 lg:px-[20px] lg:pb-[20px] lg:gap-y-[10px]"
     >
       <div className="mb-[10px] md:mb-0 lg:mr-[20px]">
         <label
@@ -50,8 +50,9 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
           defaultValue={selectOrder[0]}
           options={selectOrder}
           classNames={{
-            control: () => "!bg-white md:w-[314px] lg:w-[290px]",
-            singleValue: () => "!text-dark",
+            control: () => "!bg-white md:w-[314px] lg:w-[290px] dark:!bg-dark",
+            singleValue: () => "!text-dark dark:!text-white",
+            option: () => "dark:!text-white",
           }}
         />
       </div>
@@ -70,8 +71,9 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
           defaultValue={selectType[0]}
           options={selectType}
           classNames={{
-            control: () => "!bg-white md:w-[314px] lg:w-[290px]",
-            singleValue: () => "!text-dark",
+            control: () => "!bg-white md:w-[314px] lg:w-[290px] dark:!bg-dark",
+            singleValue: () => "!text-dark dark:!text-white",
+            option: () => "dark:!text-white",
           }}
         />
       </div>
@@ -90,8 +92,9 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
           defaultValue={selectDataBreeds[0]}
           options={selectDataBreeds}
           classNames={{
-            control: () => "!bg-white md:w-[314px] lg:w-[290px]",
-            singleValue: () => "!text-dark",
+            control: () => "!bg-white md:w-[314px] lg:w-[290px] dark:!bg-dark",
+            singleValue: () => "!text-dark dark:!text-white",
+            option: () => "dark:!text-white",
           }}
         />
       </div>
@@ -110,8 +113,9 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
           defaultValue={selectLimitGallery[0]}
           options={selectLimitGallery}
           classNames={{
-            control: () => "!bg-white md:w-[254px] lg:w-[240px]",
-            singleValue: () => "!text-dark",
+            control: () => "!bg-white md:w-[254px] lg:w-[240px] dark:!bg-dark",
+            singleValue: () => "!text-dark dark:!text-white",
+            option: () => "dark:!text-white",
           }}
         />
       </div>
@@ -119,8 +123,8 @@ const GalleryForm = ({ onSubmit, selectDataBreeds }: GalleryFormProps) => {
       <Button
         type="submit"
         icon="icon-update"
-        btnStyles="w-full bg-white hover:bg-pink md:w-[40px] md:h-[40px] md:self-end"
-        iconStyles="group-hover:fill-white"
+        btnStyles="w-full bg-white dark:bg-dark hover:bg-pink dark:hover:bg-pink-20 md:w-[40px] md:h-[40px] md:self-end"
+        iconStyles="group-hover:fill-white dark:group-hover:fill-pink"
       />
     </form>
   );

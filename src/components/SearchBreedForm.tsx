@@ -46,10 +46,10 @@ const SearchBreedForm = ({ pathname }: SearchBreedFormProps) => {
         value={value}
         onChange={handleChange}
         className={clsx(
-          "w-full bg-white rounded-20 py-[15px] pl-[20px] pr-[70px] text-dark text-20 leading-normal placeholder:text-grey border-[2px] outline-none",
+          "w-full bg-white dark:bg-grey-0.05 rounded-20 py-[15px] pl-[20px] pr-[70px] text-dark dark:text-white text-20 leading-normal placeholder:text-grey border-[2px] outline-none",
           pathname === "/search"
             ? "border-pink"
-            : "hover:border-light-pink transition-colors duration-350 border-transparent focus:border-pink"
+            : "hover:border-light-pink dark:hover:border-pink-20 transition-colors duration-350 border-transparent focus:border-pink dark:focus:border-pink-20"
         )}
         placeholder="Search for breeds by name"
       />
@@ -57,8 +57,8 @@ const SearchBreedForm = ({ pathname }: SearchBreedFormProps) => {
       <Button
         type="submit"
         icon="icon-search"
-        btnStyles="absolute top-[10px] right-[10px] hover:bg-pink group-hover:fill-white"
-        iconStyles="group-hover:fill-white"
+        btnStyles="absolute top-[10px] right-[10px] dark:bg-pink-20 hover:bg-pink dark:hover:bg-light-pink group-hover:fill-white"
+        iconStyles="group-hover:fill-white dark:group-hover:fill-pink"
       />
     </form>
   );

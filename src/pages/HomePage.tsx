@@ -11,7 +11,7 @@ const HomePage = () => {
       <section className="hidden lg:block">
         <div className="rounded-20 bg-transparent w-[680px] h-[840px]" />
 
-        <div className="before:content-[''] before:block before:h-[840px] before:w-[680px] before:bg-light-pink before:absolute before:top-[30px] before:right-[30px] before:rounded-20">
+        <div className="before:content-[''] before:block before:h-[840px] before:w-[680px] before:bg-light-pink dark:before:bg-grey-0.05 before:absolute before:top-[30px] before:right-[30px] before:rounded-20">
           <img
             src={"/images/girl.png"}
             alt="girl and pet"

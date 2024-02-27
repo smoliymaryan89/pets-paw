@@ -39,7 +39,7 @@ const Overlay = ({ text, imageId }: OverlayProps) => {
               ? "!fill-pink"
               : "!fill-transparent stroke-pink"
           )}
-          btnStyles="bg-white"
+          btnStyles="bg-white dark:bg-light-dark"
           onClick={() =>
             pathname === "/favourites" && imageId
               ? deleteFavorite.mutate(imageId, {
@@ -49,7 +49,9 @@ const Overlay = ({ text, imageId }: OverlayProps) => {
           }
         />
       ) : (
-        <p className="text-pink rounded-10 py-[5px] bg-white w-full">{text}</p>
+        <p className="text-pink rounded-10 py-[5px] bg-white dark:bg-light-dark w-full">
+          {text}
+        </p>
       )}
     </div>
   );

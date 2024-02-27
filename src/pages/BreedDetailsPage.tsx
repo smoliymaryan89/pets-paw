@@ -19,7 +19,7 @@ const BreedDetailsPage = () => {
       <BackBtn
         text="BREEDS"
         additionalText={breedId}
-        className="!bg-light-pink !text-pink"
+        className="!bg-light-pink !text-pink dark:!bg-pink-20"
       />
 
       {isFetching ? (

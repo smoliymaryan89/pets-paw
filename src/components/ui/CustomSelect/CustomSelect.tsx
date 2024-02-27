@@ -15,6 +15,7 @@ interface CustomSelectProps {
   classNames?: {
     control?: () => string;
     singleValue?: () => string;
+    option?: () => string;
   };
 }
 

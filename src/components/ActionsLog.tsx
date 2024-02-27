@@ -28,9 +28,9 @@ const ActionsLog = ({ votes }: ActionsLogProps) => {
         .map(({ image_id, created_at, value, action, id }) => (
           <li
             key={created_at + id}
-            className="bg-dark-white p-[15px] rounded-10 mb-[10px] flex flex-wrap items-center last:mb-0"
+            className="bg-dark-white dark:bg-grey-0.05 p-[15px] rounded-10 mb-[10px] flex flex-wrap items-center last:mb-0"
           >
-            <span className="block w-[61px] py-[3px] px-[10px] rounded-5 bg-white text-dark leading-normal mb-[10px] md:mb-0 md:mr-[20px]">
+            <span className="block w-[61px] py-[3px] px-[10px] rounded-5 bg-white dark:bg-dark text-dark dark:text-white leading-normal mb-[10px] md:mb-0 md:mr-[20px]">
               {formatTime(created_at)}
             </span>
 
@@ -61,7 +61,9 @@ const ActionsLog = ({ votes }: ActionsLogProps) => {
 
             <p className="leading-normal max-w-[267px] md:max-w-full">
               Image ID:{" "}
-              <span className="font-medium text-dark">{image_id || id}</span>{" "}
+              <span className="font-medium text-dark dark:text-white">
+                {image_id || id}
+              </span>{" "}
               {action === "delete" ? "was removed from" : "was added to"}{" "}
               {value === 1 ? "Likes" : value === -1 ? "Dislikes" : "Favourites"}
             </p>

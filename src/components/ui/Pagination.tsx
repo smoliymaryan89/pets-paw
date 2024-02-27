@@ -35,7 +35,7 @@ const Pagination = ({
             "gap-[10px] text-12 text-pink font-medium leading-[1.3] tracking-[2px] py-[12px] px-[20px] md:px-[30px]",
             page === 0
               ? "!bg-dark-white text-grey"
-              : "hover:bg-pink hover:text-white"
+              : "dark:bg-pink-20 hover:bg-pink dark:hover:bg-pink hover:text-white"
           )}
         />
       </li>
@@ -55,7 +55,7 @@ const Pagination = ({
             "gap-[10px] flex-row-reverse text-12 text-pink font-medium leading-[1.3] tracking-[2px] py-[12px] px-[20px] md:px-[30px]",
             isPlaceholderData || limit > data?.length
               ? "!bg-dark-white text-grey"
-              : "hover:bg-pink hover:text-white"
+              : "dark:bg-pink-20 hover:bg-pink dark:hover:bg-pink hover:text-white"
           )}
         />
       </li>

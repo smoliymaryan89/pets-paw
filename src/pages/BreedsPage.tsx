@@ -109,8 +109,8 @@ const BreedsPage = () => {
           <Button
             icon="icon-sort-top"
             btnStyles={clsx(
-              "!bg-dark-white w-[40px] h-[40px] border-[2px] border-transparent hover:border-light-pink self-end min-w-[40px] md:self-start",
-              sortType === "asc" && "!border-light-pink"
+              "!bg-dark-white dark:!bg-grey-0.05 w-[40px] h-[40px] border-[2px] border-transparent hover:border-light-pink dark:hover:border-pink-20 self-end min-w-[40px] md:self-start",
+              sortType === "asc" && "!border-light-pink dark:!border-pink-20"
             )}
             iconStyles={clsx(
               "!fill-grey group-hover:!fill-pink",
@@ -122,8 +122,8 @@ const BreedsPage = () => {
           <Button
             icon="icon-sort-bottom"
             btnStyles={clsx(
-              "!bg-dark-white border-[2px] w-[40px] h-[40px] border-transparent hover:border-light-pink self-end min-w-[40px] md:self-start",
-              sortType === "desc" && "!border-light-pink"
+              "!bg-dark-white dark:!bg-grey-0.05 border-[2px] w-[40px] h-[40px] border-transparent hover:border-light-pink dark:hover:border-pink-20 self-end min-w-[40px] md:self-start",
+              sortType === "desc" && "!border-light-pink dark:!border-pink-20"
             )}
             iconStyles={clsx(
               "!fill-grey group-hover:!fill-pink",

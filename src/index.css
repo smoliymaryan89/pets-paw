@@ -7,13 +7,13 @@
 
 @layer base {
   body {
-    @apply text-grey bg-dark-white font-jost;
+    @apply text-grey bg-dark-white font-jost dark:bg-dark;
   }
 }
 
 @layer components {
   .section {
-    @apply rounded-20 h-full bg-white px-[20px] pt-[20px] pb-[23px] md:pb-[20px] lg:pb-[24px] lg:w-[680px];
+    @apply rounded-20 h-full bg-white dark:bg-grey-0.05 px-[20px] pt-[20px] pb-[23px] md:pb-[20px] lg:pb-[24px] lg:w-[680px];
   }
 
   .cats-list {

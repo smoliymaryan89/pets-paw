@@ -22,7 +22,7 @@ const BackBtn = ({ text, additionalText, className }: BackBtnProps) => {
     >
       <Button
         icon="icon-back"
-        btnStyles="hover:bg-pink"
+        btnStyles="hover:bg-pink dark:bg-pink-20 dark:hover:bg-pink"
         iconStyles="group-hover:fill-white"
         onClick={() => navigate(-1)}
       />

@@ -19,7 +19,7 @@ const ActionButtons = ({
   const isFavourite = favourites?.find((fav) => fav?.image?.id === imageId);
 
   return (
-    <ul className="absolute -bottom-[34px] left-1/2 -translate-x-1/2 flex items-center gap-[3px] border-[4px] border-white w-max rounded-10 bg-white md:rounded-20 md:-bottom-[44px]">
+    <ul className="absolute -bottom-[34px] left-1/2 -translate-x-1/2 flex items-center gap-[3px] border-[4px] border-white dark:border-[#282828] w-max rounded-10 dark:rounded-14 bg-white md:rounded-20 md:-bottom-[44px] dark:md:rounded-24">
       <li>
         <Button
           icon="icon-like"

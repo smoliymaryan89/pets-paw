@@ -1,9 +1,13 @@
 .custom-select__control {
-  @apply !border-[2px] !h-[40px] !border-transparent !shadow-none !bg-dark-white !rounded-10 py-[8px] px-[10px]  hover:!border-light-pink;
+  @apply !border-[2px] !h-[40px] !border-transparent !shadow-none !bg-dark-white dark:!bg-grey-0.05 !rounded-10 py-[8px] px-[10px]  hover:!border-light-pink;
+}
+
+.custom-select__control:hover {
+  @apply !border-light-pink dark:!border-pink-20;
 }
 
 .custom-select__control--menu-is-open {
-  @apply !border-light-pink;
+  @apply !border-light-pink dark:!border-pink-20;
 }
 
 .custom-select__value-container {
@@ -35,7 +39,7 @@
 }
 
 .custom-select__menu {
-  @apply !mb-0 !shadow-none !rounded-20 !bg-white;
+  @apply !mb-0 !shadow-none !rounded-20 !bg-white dark:!bg-dark;
 }
 
 .custom-select__menu-list {

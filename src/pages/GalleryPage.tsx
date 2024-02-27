@@ -65,7 +65,7 @@ const GalleryPage = () => {
             icon="icon-upload"
             text="UPLOAD"
             iconStyles="w-[16px] h-[16px] group-hover:fill-white"
-            btnStyles="w-full gap-[10px] text-pink text-12 font-medium leading-[1.3] tracking-[2px] py-[12px] hover:bg-pink hover:text-white md:max-w-[143px]"
+            btnStyles="dark:bg-pink-20 w-full gap-[10px] text-pink text-12 font-medium leading-[1.3] tracking-[2px] py-[12px] hover:bg-pink dark:hover:bg-pink hover:text-white md:max-w-[143px]"
             onClick={handleModal}
           />
         </div>

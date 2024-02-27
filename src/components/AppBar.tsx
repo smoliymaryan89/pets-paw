@@ -25,7 +25,7 @@ const AppBar = () => {
           <Button
             onClick={handleMenu}
             icon="icon-open"
-            btnStyles="py-[21px] px-[15px] !bg-white rounded-20 h-[60px] hover:!bg-pink"
+            btnStyles="py-[21px] px-[15px] !bg-white rounded-20 h-[60px] hover:!bg-pink dark:hover:!bg-pink dark:!bg-grey-0.05"
             iconStyles="w-[30px] h-[30px] group-hover:fill-white"
           />
         )}
@@ -42,7 +42,7 @@ const AppBar = () => {
                     "w-[60px] h-[60px] rounded-[20px] flex items-center justify-center",
                     isActive
                       ? "bg-pink"
-                      : "bg-white hover:bg-light-pink transition-colors duration-350"
+                      : "bg-white dark:bg-grey-0.05 hover:bg-light-pink dark:hover:bg-light-pink transition-colors duration-350"
                   )
                 }
               >
