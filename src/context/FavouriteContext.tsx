@@ -26,8 +26,6 @@ const FavouriteProvider = ({ children }: FavouriteProviderProps) => {
   const addFavorite = useAddFavourite();
   const deleteFavorite = useDeleteFavourite();
 
-  console.log(favourites);
-
   const toggleFavourite = (data: FavData) => {
     const isFavourite = favourites?.find(
       (fav) => fav.image.id === data.image_id
