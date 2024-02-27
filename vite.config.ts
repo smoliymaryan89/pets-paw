@@ -16,6 +16,7 @@ export default defineConfig({
       "@hooks": "/src/hooks",
       "@layouts": "/src/layouts",
       "@services": "/src/services",
+      "@context": "/src/context",
     },
   },
 });
