@@ -50,7 +50,7 @@ const NavLink = ({
             "block py-[10px] rounded-10 w-full text-12 font-medium leading-[1.3] tracking-[2px]",
             isActive
               ? "text-white bg-pink"
-              : "text-pink bg-white hover:bg-light-pink transition-colors duration-350"
+              : "text-pink bg-white dark:bg-grey-0.05 hover:bg-light-pink dark:hover:bg-light-pink transition-colors duration-350"
           )
         }
       >
