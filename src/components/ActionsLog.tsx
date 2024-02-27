@@ -1,11 +1,11 @@
 import { useLocation } from "react-router-dom";
-import { VoteRes } from "../types/vote";
+import { FavHistory, VoteRes } from "../types/vote";
 
 import clsx from "clsx";
 import formatTime from "@utils/helpers/formatTime";
 
 interface ActionsLogProps {
-  votes: (VoteRes & { action?: string })[];
+  votes: (VoteRes & { action?: string })[] | FavHistory[];
 }
 
 const ActionsLog = ({ votes }: ActionsLogProps) => {
@@ -20,7 +20,7 @@ const ActionsLog = ({ votes }: ActionsLogProps) => {
         )
         .map(({ image_id, created_at, value, action, id }) => (
           <li
-            key={image_id}
+            key={created_at + id}
             className="bg-dark-white p-[15px] rounded-10 mb-[10px] flex flex-wrap items-center last:mb-0"
           >
             <span className="block w-[61px] py-[3px] px-[10px] rounded-5 bg-white text-dark leading-normal mb-[10px] md:mb-0 md:mr-[20px]">
