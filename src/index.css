@@ -48,7 +48,7 @@
 }
 
 .swiper-pagination {
-  @apply !p-0 !px-[10px] !py-[10px] !rounded-20 !w-[95px] bg-white !left-1/2 !-bottom-[22px] !-translate-x-1/2 !overflow-visible !z-40;
+  @apply !p-0 !px-[10px] !py-[10px] !rounded-20 !w-[95px] bg-white dark:bg-light-dark !left-1/2 !-bottom-[22px] !-translate-x-1/2 !overflow-visible !z-40;
 }
 
 .swiper-pagination-bullet {

@@ -8,8 +8,8 @@ const BreedDescription = ({ data }: BreedDescriptionProps) => {
   const breed = data[0]?.breeds[0];
 
   return (
-    <div className="relative border-[2px] border-light-pink rounded-20 pt-[19px] pb-[14px] px-[20px] max-w-[640px]">
-      <h1 className="text-20 text-dark font-medium px-[20px] py-[16px] rounded-20 bg-white absolute -top-[31px] left-1/2 -translate-x-1/2 w-max md:text-36 md:py-[5px] md:px-[40px]">
+    <div className="relative border-[2px] border-light-pink dark:border-pink-20 rounded-20 pt-[19px] pb-[14px] px-[20px] max-w-[640px]">
+      <h1 className="text-20 text-dark dark:text-white font-medium px-[20px] py-[16px] rounded-20 bg-white dark:bg-light-dark absolute -top-[31px] left-1/2 -translate-x-1/2 w-max md:text-36 md:py-[5px] md:px-[40px]">
         {breed?.name}
       </h1>
 
@@ -19,25 +19,27 @@ const BreedDescription = ({ data }: BreedDescriptionProps) => {
 
       <div className="flex flex-wrap gap-[10px] md:gap-[75px]">
         <div className="max-w-[215px]">
-          <span className="font-medium text-dark block">Temperament:</span>
+          <span className="font-medium text-dark dark:text-white block">
+            Temperament:
+          </span>
           <p>{breed?.temperament}</p>
         </div>
 
         <ul className="flex flex-col gap-[10px]">
           <li>
-            <span className="font-medium text-dark block md:inline-block">
+            <span className="font-medium text-dark dark:text-white block md:inline-block">
               Origin:
             </span>{" "}
             {breed?.origin}
           </li>
           <li>
-            <span className="font-medium text-dark block md:inline-block">
+            <span className="font-medium text-dark dark:text-white block md:inline-block">
               Weight:
             </span>{" "}
             {breed?.weight.metric} kgs
           </li>
           <li>
-            <span className="font-medium text-dark block md:inline-block">
+            <span className="font-medium text-dark dark:text-white block md:inline-block">
               Life span:
             </span>{" "}
             {breed?.life_span} years
