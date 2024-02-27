@@ -1,11 +1,18 @@
 import { useLocation } from "react-router-dom";
-import { FavHistory, VoteRes } from "../types/vote";
 
 import clsx from "clsx";
 import formatTime from "@utils/helpers/formatTime";
 
+interface Vote {
+  image_id?: string;
+  created_at: string;
+  value?: number;
+  action?: string;
+  id: string;
+}
+
 interface ActionsLogProps {
-  votes: (VoteRes & { action?: string })[] | FavHistory[];
+  votes: Vote[];
 }
 
 const ActionsLog = ({ votes }: ActionsLogProps) => {
