@@ -1,26 +1,14 @@
-import { useEffect, useState } from "react";
+import { useDarkModeContext } from "@hooks/useDarkModeContext";
 
 import clsx from "clsx";
 
 const Switcher = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(
-    localStorage.getItem("theme") === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-  );
-
-  useEffect(() => {
-    if (isDarkTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
-  }, [isDarkTheme]);
+  const [isDarkTheme, setIsDarkTheme] = useDarkModeContext() ?? [];
 
   const handleSwitch = () => {
-    setIsDarkTheme((prev) => !prev);
+    if (setIsDarkTheme) {
+      setIsDarkTheme((prev) => !prev);
+    }
   };
 
   return (
