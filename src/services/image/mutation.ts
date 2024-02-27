@@ -1,3 +1,4 @@
+import { AxiosError } from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { uploadImage } from "./api";
 
@@ -7,8 +8,13 @@ export const useUploadImage = () => {
   return useMutation({
     mutationFn: (data: FormData) => uploadImage(data),
 
-    onError: () => {
-      toast.error("Something went wrong, please try again!");
+    onError: (error: Error) => {
+      if (
+        (error as AxiosError)?.response?.data !==
+        "Classifcation failed: correct animal not found."
+      ) {
+        toast.error("Something went wrong, please try again!");
+      }
     },
   });
 };
