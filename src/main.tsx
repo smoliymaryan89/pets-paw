@@ -4,13 +4,17 @@ import App from "./App.tsx";
 import "./index.css";
 
 import { BrowserRouter } from "react-router-dom";
+
 import TanstackProvider from "@utils/providers/TanstackProvider.tsx";
+import FavouriteProvider from "@context/FavouriteContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <TanstackProvider>
-        <App />
+        <FavouriteProvider>
+          <App />
+        </FavouriteProvider>
       </TanstackProvider>
     </BrowserRouter>
   </React.StrictMode>
