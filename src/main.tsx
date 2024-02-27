@@ -7,13 +7,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import TanstackProvider from "@utils/providers/TanstackProvider.tsx";
 import FavouriteProvider from "@context/FavouriteContext.tsx";
+import DarkModeProvider from "@context/DarkModeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <TanstackProvider>
         <FavouriteProvider>
-          <App />
+          <DarkModeProvider>
+            <App />
+          </DarkModeProvider>
         </FavouriteProvider>
       </TanstackProvider>
     </BrowserRouter>
