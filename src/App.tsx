@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { nanoid } from "nanoid";
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import { nanoid } from "nanoid";
 
 import Layout from "@layouts/Layout";
 import HomePage from "@pages/HomePage";
@@ -18,6 +18,10 @@ const App = () => {
   useEffect(() => {
     if (!localStorage.getItem("user-id")) {
       localStorage.setItem("user-id", nanoid());
+    }
+
+    if (!localStorage.getItem("fav-history")) {
+      localStorage.setItem("fav-history", JSON.stringify([]));
     }
   }, []);
 
