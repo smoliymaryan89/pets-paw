@@ -9,6 +9,7 @@ import Loader from "@components/ui/Loader";
 import GalleryForm from "@components/GalleryForm";
 import Button from "@components/ui/Button";
 import BackBtn from "@components/ui/BackBtn";
+import NoItemFound from "@components/NoItemFound";
 
 export interface Data {
   limit: string;
@@ -81,7 +82,7 @@ const GalleryPage = () => {
           breedsByParams && <CatList data={breedsByParams} isOverlay={true} />
         )}
 
-        {breedsByParams && (
+        {breedsByParams && breedsByParams.length > 0 ? (
           <Pagination
             handlePage={handlePage}
             page={page}
@@ -89,6 +90,8 @@ const GalleryPage = () => {
             data={breedsByParams}
             limit={Number(selectData?.limit) ?? 5}
           />
+        ) : (
+          (!isLoading || !isFetching) && <NoItemFound />
         )}
       </section>
 
