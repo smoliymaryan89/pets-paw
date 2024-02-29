@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Pets Paw
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Pets Paw, your ultimate destination for all things feline! Whether you're a cat lover, owner, or just looking to explore the wonderful world of cats, Pets Paw has something for you. Our website allows users to interact with a variety of features including voting, searching for cats by breed, browsing galleries, applying filters, and even uploading images of your own adorable felines.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `React.js`
+- `TypeScript`
+- `TanStack Query`
+- `Tailwindcss`
+- `Vite`
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+https://github.com/smoliymaryan89/pets-paw.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Navigate to the project directory:
+
+```bash
+cd pets-paw
+```
+
+- Install dependencies:
+
+```bash
+yarn
+```
+
+- Start the application:
+
+```bash
+yarn dev
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`VITE_API_KEY`
+
+`VITE_BASE_URL`
